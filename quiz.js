@@ -1,4 +1,4 @@
-var treeArray = [];
+// var treeArray = [];
 var pineTree = {
 	treeCharacter: "", 
 	numHeight: ""
@@ -6,7 +6,7 @@ var pineTree = {
 
 var myButton = document.getElementById('thisWillGrowATree');
 myButton.addEventListener('click', getValues);
-window.addEventListener('onkeyup', inputKeyUp);
+window.addEventListener('inputKeyUp', inputKeyUp);
 
 function growTree(height) {
 	var treeWidth  = height.treeCharacter;
@@ -25,15 +25,15 @@ function growTree(height) {
 }
 
 function inputKeyUp(event) {
-	console.log("keyWasPressed", event);
-    if(inputKeyUp.keyCode === 13) {
+
+    if(event.keyCode === 13) {
     	console.log("height", event);
-    	growTree(treeArray);
+    	getValues(pineTree);
     }    
 }
-function listenForClick() {
-	growTree(treeArray);
-}
+// function listenForClick() {
+	// growTree();
+// }
 
 
 function getValues (clickEvent) {
@@ -51,5 +51,5 @@ function getValues (clickEvent) {
 	}
 
 
-
+// document.getElementById('tree').addEventListener("keypress", getValues)
 
