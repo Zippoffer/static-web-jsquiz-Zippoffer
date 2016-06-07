@@ -27,7 +27,7 @@ function growTree(height) {
 function inputKeyUp(event) {
 
     if(event.keyCode === 13) {
-    	console.log("height", event);
+    	// console.log("height", event);
     	getValues(pineTree);
     }    
 }
